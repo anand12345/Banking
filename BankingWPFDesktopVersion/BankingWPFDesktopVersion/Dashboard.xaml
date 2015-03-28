@@ -8,7 +8,7 @@
 	Title="Dashboard" Loaded="Page_Loaded">
 
     <Grid Width="1275" Height="1088">
-        <Button Content="Add Customer" Height="31" HorizontalAlignment="Left" Margin="12,12,0,0" Name="btnAdd" VerticalAlignment="Top" Width="172" />
+        <Button Content="Add New Customer" Height="31" HorizontalAlignment="Left" Margin="12,12,0,0" Name="btnAdd" VerticalAlignment="Top" Width="172" />
         <Button Content="Accounts" Height="31" HorizontalAlignment="Left" Margin="209,12,0,0" Name="btnAccounts" VerticalAlignment="Top" Width="188" Click="btnAccounts_Click" />
         <Frame x:Name="mainFrame" NavigationUIVisibility="Hidden" Margin="12,49,12,12" />
         </Grid>
