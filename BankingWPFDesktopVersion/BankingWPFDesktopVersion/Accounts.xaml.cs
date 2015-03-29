@@ -23,6 +23,7 @@ namespace BankingWPFDesktopVersion
         private Transactions transactions;
         private DataTable account;
         private Withdraw withdraw;
+        private Deposit deposit;
 
         public Accounts()
         {
@@ -55,6 +56,13 @@ namespace BankingWPFDesktopVersion
             if (withdraw == null)
                 withdraw = new Withdraw(account);
             mainFrame.Navigate(withdraw);
+        }
+
+        private void btnDeposit_Click(object sender, RoutedEventArgs e)
+        {
+            if (deposit == null)
+                deposit = new Deposit(account);
+            mainFrame.Navigate(deposit);
         }
     }
 }

@@ -118,7 +118,7 @@ namespace BankingWPFDesktopVersion
                        "transaction_amount,transaction_description,check_ref_no,account_no) values(?,?,?,?,?,?,?)", connection);
                 //cmd.Parameters.Add("@date", System.DateTime.Now.Date.ToShortDateString());
                 //cmd.Parameters.Add("@date", System.DateTime.Now.Date);
-                cmd.Parameters.AddWithValue("transaction_type", "General");
+                cmd.Parameters.AddWithValue("transaction_type", "Withdraw");
                 cmd.Parameters.AddWithValue("transaction_date", DateTime.Now.Date);
                 cmd.Parameters.AddWithValue("value_date", DateTime.Now.Date);
                 cmd.Parameters.AddWithValue("transaction_amount", amount);
@@ -138,5 +138,36 @@ namespace BankingWPFDesktopVersion
             return result;
         }
 
+
+        public Boolean depositAmount(string amount, string accountNo)
+        {
+            Boolean result = false;
+            SQLiteCommand cmd = new SQLiteCommand("update account set closing_balance = closing_balance + " + amount + "  where account_no like'" + accountNo + "'", connection);
+            openConnection();
+            SQLiteTransaction transaction = connection.BeginTransaction();
+            try
+            {
+                cmd.ExecuteNonQuery();
+                cmd = new SQLiteCommand("insert into transactions(transaction_type,transaction_date,value_date," +
+                       "transaction_amount,transaction_description,check_ref_no,account_no) values(?,?,?,?,?,?,?)", connection);
+                cmd.Parameters.AddWithValue("transaction_type", "Deposit");
+                cmd.Parameters.AddWithValue("transaction_date", DateTime.Now.Date);
+                cmd.Parameters.AddWithValue("value_date", DateTime.Now.Date);
+                cmd.Parameters.AddWithValue("transaction_amount", amount);
+                cmd.Parameters.AddWithValue("transaction_description", "");
+                cmd.Parameters.AddWithValue("check_ref_no", "");
+                cmd.Parameters.AddWithValue("account_no", accountNo);
+
+                cmd.ExecuteNonQuery();
+                transaction.Commit();
+                result = true;
+            }
+            catch (Exception ex)
+            {
+                transaction.Rollback();
+            }
+            closeConnection();
+            return result;
+        }
     }
 }
