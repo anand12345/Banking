@@ -20,27 +20,37 @@ namespace BankingWPFDesktopVersion
     public partial class Dashboard : Page
     {
         private Boolean isAdmin = false;
+        private Main addNew;
+        private Accounts accounts;
         public Dashboard(Boolean isAdminLogin)
         {
             InitializeComponent();
             this.isAdmin = isAdminLogin;
+            addNew = new Main();
+            accounts = new Accounts();
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             if (isAdmin)
             {
-                mainFrame.Navigate(new Main());
+                mainFrame.Navigate(addNew);
             }
             else
             {
                 btnAdd.Visibility = Visibility.Hidden;
+                mainFrame.Navigate(accounts);
             }
         }
 
         private void btnAccounts_Click(object sender, RoutedEventArgs e)
         {
-            mainFrame.Navigate(new Accounts());
+            mainFrame.Navigate(accounts);
+        }
+
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            mainFrame.Navigate(addNew);
         }
     }
 }

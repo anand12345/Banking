@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data;
 
 namespace BankingWPFDesktopVersion
 {
@@ -19,21 +20,41 @@ namespace BankingWPFDesktopVersion
     /// </summary>
     public partial class Accounts : Page
     {
+        private Transactions transactions;
+        private DataTable account;
+        private Withdraw withdraw;
+
         public Accounts()
         {
             InitializeComponent();
-            gridAccounts.ItemsSource = new DataController().getCustomerDataTable().DefaultView;
-            gridAccounts.AutoGenerateColumns = true;
+            btnWithdraw.Visibility = Visibility.Hidden;
+            btnDeposit.Visibility = Visibility.Hidden;
         }
 
-        private void dataGrid1_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
+            DataController controller = new DataController();
+            if ( (account = controller.getAccount(txtAccountNumber.Text)).Rows.Count > 0)
+            {
+                btnDeposit.Visibility = Visibility.Visible;
+                btnWithdraw.Visibility = Visibility.Visible;
+                //MessageBox.Show(dataset.transactions.Rows.Count.ToString());
+                transactions = new Transactions(account);
+                mainFrame.Navigate(transactions);
+
+            }
+            else
+            {
+                MessageBox.Show("Account number not found! ");
+            }
 
         }
 
-        private void Page_Loaded(object sender, RoutedEventArgs e)
+        private void btnWithdraw_Click(object sender, RoutedEventArgs e)
         {
-
+            if (withdraw == null)
+                withdraw = new Withdraw(account);
+            mainFrame.Navigate(withdraw);
         }
     }
 }

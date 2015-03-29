@@ -4,10 +4,15 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       mc:Ignorable="d" 
-      d:DesignHeight="791" d:DesignWidth="962"
-	Title="Accounts" Loaded="Page_Loaded">
+      d:DesignHeight="627" d:DesignWidth="1206"
+	Title="Accounts">
 
-    <Grid Height="694" Width="979">
-        <DataGrid AutoGenerateColumns="False" Height="703" HorizontalAlignment="Left" Name="gridAccounts" VerticalAlignment="Top" Width="931" SelectionChanged="dataGrid1_SelectionChanged" ItemsSource="{Binding}" Margin="12,0,0,0" />
-    </Grid>
+    <Grid>
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="266,44,0,0" Name="txtAccountNumber" VerticalAlignment="Top" Width="231" />
+        <Label Content="Enter Account Number:" Height="28" HorizontalAlignment="Left" Margin="87,42,0,0" Name="label1" VerticalAlignment="Top" Width="151" />
+        <Button Content="Submit" Height="23" HorizontalAlignment="Left" Margin="542,44,0,0" Name="btnSubmit" VerticalAlignment="Top" Width="75" Click="btnSubmit_Click" />
+        <Button Content="Withdraw" Height="23" HorizontalAlignment="Left" Margin="87,134,0,0" Name="btnWithdraw" VerticalAlignment="Top" Width="93" Click="btnWithdraw_Click" />
+        <Button Content="Deposit" Height="23" HorizontalAlignment="Left" Margin="87,189,0,0" Name="btnDeposit" VerticalAlignment="Top" Width="93" />
+        <Frame x:Name="mainFrame" NavigationUIVisibility="Hidden" Margin="201,88,0,0" HorizontalAlignment="Left" Width="993" Height="507" VerticalAlignment="Top" />
+        </Grid>
 </Page>

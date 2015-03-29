@@ -27,3 +27,7 @@ F:\Resoneuronance\Banking\BankingWPFDesktopVersion\BankingWPFDesktopVersion\obj\
 F:\Resoneuronance\Banking\BankingWPFDesktopVersion\BankingWPFDesktopVersion\obj\x86\Debug\Dashboard.g.cs
 F:\Resoneuronance\Banking\BankingWPFDesktopVersion\BankingWPFDesktopVersion\obj\x86\Debug\Accounts.baml
 F:\Resoneuronance\Banking\BankingWPFDesktopVersion\BankingWPFDesktopVersion\obj\x86\Debug\Accounts.g.cs
+F:\Resoneuronance\Banking\BankingWPFDesktopVersion\BankingWPFDesktopVersion\obj\x86\Debug\Transactions.baml
+F:\Resoneuronance\Banking\BankingWPFDesktopVersion\BankingWPFDesktopVersion\obj\x86\Debug\Transactions.g.cs
+F:\Resoneuronance\Banking\BankingWPFDesktopVersion\BankingWPFDesktopVersion\obj\x86\Debug\Withdraw.baml
+F:\Resoneuronance\Banking\BankingWPFDesktopVersion\BankingWPFDesktopVersion\obj\x86\Debug\Withdraw.g.cs
