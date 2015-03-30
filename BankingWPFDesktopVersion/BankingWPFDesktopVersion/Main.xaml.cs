@@ -56,6 +56,12 @@ namespace BankingWPFDesktopVersion
             dateOfOpening.Text = System.DateTime.Now.ToString();
             txtAccountNo.Text = getAccountNumber();
 
+            customizeControls();
+            //dob.LostFocus = dobChanged;
+        }
+
+        private void customizeControls()
+        {
             txtName.FontFamily = new FontFamily(MARATHI_FONT);
             txtName.FontSize = 18;
             txtAge.FontFamily = new FontFamily(MARATHI_FONT);
@@ -68,7 +74,6 @@ namespace BankingWPFDesktopVersion
             txtAccountNo.FontSize = 18;
             dob.FontFamily = new FontFamily(MARATHI_FONT);
             dob.FontSize = 18;
-            //dob.LostFocus = dobChanged;
         }
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
