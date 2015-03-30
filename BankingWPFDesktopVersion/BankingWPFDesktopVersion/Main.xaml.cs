@@ -66,6 +66,7 @@ namespace BankingWPFDesktopVersion
             txtName.FontSize = 18;
             txtAge.FontFamily = new FontFamily(MARATHI_FONT);
             txtAge.FontSize = 18;
+            txtAge.IsEnabled = false;
             txtMobile.FontFamily = new FontFamily(MARATHI_FONT);
             txtMobile.FontSize = 18;
             txtDeposit.FontFamily = new FontFamily(MARATHI_FONT);
@@ -74,6 +75,11 @@ namespace BankingWPFDesktopVersion
             txtAccountNo.FontSize = 18;
             dob.FontFamily = new FontFamily(MARATHI_FONT);
             dob.FontSize = 18;
+            txtAddress.FontFamily = new FontFamily(MARATHI_FONT);
+            txtAddress.FontSize = 18;
+
+            //lblName.Content = "naav";
+            //btnSave.Content = "";
         }
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
