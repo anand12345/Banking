@@ -64,5 +64,11 @@ namespace BankingWPFDesktopVersion
                 deposit = new Deposit(account);
             mainFrame.Navigate(deposit);
         }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            transactions = new Transactions(account);
+            mainFrame.Navigate(transactions);
+        }
     }
 }

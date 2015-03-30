@@ -14,6 +14,7 @@ using System.Windows.Shapes;
 using CrystalDecisions.CrystalReports.Engine;
 using CrystalDecisions.Shared;
 using System.Data.SQLite;
+using System.Data;
 
 namespace BankingWPFDesktopVersion
 {
@@ -22,16 +23,21 @@ namespace BankingWPFDesktopVersion
     /// </summary>
     public partial class Reports : Page
     {
-        public Reports()
+        private DataTable reportSource;
+        private string reportName;
+
+        public Reports(DataTable dt, string name)
         {
             InitializeComponent();
+            this.reportSource = dt;
+            this.reportName = name;
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             ReportDocument report = new ReportDocument();
-            report.Load("F:\\Resoneuronance\\Banking\\BankingWPFDesktopVersion\\BankingWPFDesktopVersion\\CustomerCrystalReport.rpt");
-            report.SetDataSource(new DataController().getCustomerDataTable());
+            report.Load("F:\\Resoneuronance\\Banking\\BankingWPFDesktopVersion\\BankingWPFDesktopVersion\\" + reportName + ".rpt");
+            report.SetDataSource(reportSource);
             crystalReportsViewer1.ViewerCore.ReportSource = report;
             
         }

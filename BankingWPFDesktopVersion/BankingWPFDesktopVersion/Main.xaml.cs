@@ -143,8 +143,8 @@ namespace BankingWPFDesktopVersion
             //CrystalReport1 rpt = new CrystalReport1();
             //rpt.
             //MessageBox.Show(txtName.Text);
-            Reports reports = new Reports();
-            this.NavigationService.Navigate(reports);
+            //Reports reports = new Reports(new DataController().getCustomerDataTable());
+            //this.NavigationService.Navigate(reports);
         }
 
 

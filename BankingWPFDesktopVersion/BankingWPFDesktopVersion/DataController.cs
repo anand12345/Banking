@@ -169,5 +169,25 @@ namespace BankingWPFDesktopVersion
             closeConnection();
             return result;
         }
+
+        public DataTable getAllTransactionsForAccount(string accountNo)
+        {
+            string query = "SELECT * FROM account INNER JOIN customer ON " +
+                            "account.customer_id = customer.customer_id INNER JOIN transactions " +
+                            "ON account.account_no = transactions.account_no " + 
+                            "where account.account_no like '" + accountNo + "'";
+
+            openConnection();
+            SQLiteCommand cmd = new SQLiteCommand(query, connection);
+            SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
+            bankingDataSet dataset = new bankingDataSet();
+            adapter.Fill(dataset);
+            closeConnection();
+            //Console.WriteLine(dataset.Tables[3].Rows[0]["closing_balance"]);
+            //Console.WriteLine(reader["customer_id"].ToString());
+            closeConnection();
+            return dataset.Tables[3];
+
+        }
     }
 }

@@ -112,6 +112,12 @@
     <Compile Include="Reports.xaml.cs">
       <DependentUpon>Reports.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TransactionsReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TransactionsReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Withdraw.xaml.cs">
       <DependentUpon>Withdraw.xaml</DependentUpon>
     </Compile>
@@ -199,6 +205,10 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="TransactionsReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TransactionsReport.cs</LastGenOutput>
+    </EmbeddedResource>
     <None Include="app.config" />
     <None Include="bankingDataSet.xsc">
       <DependentUpon>bankingDataSet.xsd</DependentUpon>
