@@ -36,7 +36,7 @@ namespace BankingWPFDesktopVersion
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             ReportDocument report = new ReportDocument();
-            report.Load("C:\\Users\\ANAND\\Documents\\Visual Studio 2010\\Projects\\Banking\\BankingWPFDesktopVersion\\BankingWPFDesktopVersion\\" + reportName + ".rpt");
+            report.Load("F:\\Resoneuronance\\Banking\\BankingWPFDesktopVersion\\BankingWPFDesktopVersion\\" + reportName + ".rpt");
             report.SetDataSource(reportSource);
             crystalReportsViewer1.ViewerCore.ReportSource = report;
             
