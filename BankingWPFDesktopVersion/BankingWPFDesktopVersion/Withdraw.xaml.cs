@@ -22,11 +22,15 @@ namespace BankingWPFDesktopVersion
     {
         private DataTable account;
         private DataController dc;
-
+        public static string MARATHI_FONT = "Shivaji02";
         public Withdraw(DataTable currentAccount)
         {
             InitializeComponent();
             this.account = currentAccount;
+            lblWithdrawal.Content = "रक्कम काढणे";
+            txtAmount.FontFamily = new FontFamily(MARATHI_FONT);
+            txtAmount.FontSize = 18;
+            btnSubmit.Content = "सादर";
         }
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)

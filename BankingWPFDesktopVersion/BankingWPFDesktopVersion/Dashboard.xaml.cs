@@ -28,6 +28,7 @@ namespace BankingWPFDesktopVersion
             this.isAdmin = isAdminLogin;
             addNew = new Main();
             accounts = new Accounts();
+
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
@@ -41,6 +42,9 @@ namespace BankingWPFDesktopVersion
                 btnAdd.Visibility = Visibility.Hidden;
                 mainFrame.Navigate(accounts);
             }
+            btnAccounts.Content = "खाते";
+            btnAdd.Content = "ग्राहक जोडा";
+
         }
 
         private void btnAccounts_Click(object sender, RoutedEventArgs e)

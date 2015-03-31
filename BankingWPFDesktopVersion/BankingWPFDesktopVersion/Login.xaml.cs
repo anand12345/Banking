@@ -24,12 +24,21 @@ namespace BankingWPFDesktopVersion
             InitializeComponent();
             initComponents();
             this.ShowsNavigationUI = false;
+            customizeControls();
+        }
+        private void customizeControls()
+        {
+
+            lblPassword.Content = "पासवर्ड";
+            lblUser.Content = "वापरकर्ता";
+            btnSubmit.Content = "प्रवेश";
+        
         }
 
         private void initComponents()
         {
-            cmbUserType.Items.Add("Admin");
-            cmbUserType.Items.Add("User");
+            cmbUserType.Items.Add("अड्मीन");
+            cmbUserType.Items.Add("वापरकर्ता");
             cmbUserType.SelectedIndex = 0;
             //mainFrame.navigat
         }

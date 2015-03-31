@@ -4,14 +4,14 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="300"
+      d:DesignHeight="378" d:DesignWidth="394"
 	Title="Login">
 
-    <Grid>
-        <Label Content="Password :" Height="28" HorizontalAlignment="Left" Margin="46,130,0,0" Name="lblPassword" VerticalAlignment="Top" Width="90" />
-        <Button Content="Login" Height="23" HorizontalAlignment="Left" Margin="142,182,0,0" Name="btnSubmit" VerticalAlignment="Top" Width="75" Click="btnSubmit_Click" />
-        <ComboBox Height="23" HorizontalAlignment="Left" Margin="142,96,0,0" Name="cmbUserType" VerticalAlignment="Top" Width="120" />
-        <Label Content="User :" Height="28" HorizontalAlignment="Left" Margin="46,96,0,0" Name="lblUser" VerticalAlignment="Top" Width="78" />
-        <PasswordBox Height="23" HorizontalAlignment="Left" Margin="142,130,0,0" Name="txtPassword" VerticalAlignment="Top" Width="120" />
+    <Grid HorizontalAlignment="Center">
+        <Label Content="Password :" Height="28" HorizontalAlignment="Left" Margin="46,130,0,0" Name="lblPassword" VerticalAlignment="Top" Width="124" />
+        <Button Content="Login" Height="23" HorizontalAlignment="Left" Margin="142,182,0,0" Name="btnSubmit" VerticalAlignment="Top" Width="115" Click="btnSubmit_Click" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="142,96,0,0" Name="cmbUserType" VerticalAlignment="Top" Width="162" />
+        <Label Content="User :" Height="28" HorizontalAlignment="Left" Margin="46,96,0,0" Name="lblUser" VerticalAlignment="Top" Width="124" />
+        <PasswordBox Height="23" HorizontalAlignment="Left" Margin="142,130,0,0" Name="txtPassword" VerticalAlignment="Top" Width="162" />
     </Grid>
 </Page>

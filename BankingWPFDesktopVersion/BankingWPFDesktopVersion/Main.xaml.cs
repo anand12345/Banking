@@ -36,21 +36,21 @@ namespace BankingWPFDesktopVersion
             dbConnection = new SQLiteConnection("Data Source=banking.sqlite;Version=3;");
 
             //lblLoggedIn.Content = "Logged in as :" + loggedIn;
-            cmbSex.Items.Add("Male");
-            cmbSex.Items.Add("Female");
+            cmbSex.Items.Add("पुरुष");
+            cmbSex.Items.Add("स्त्री");
             cmbSex.SelectedIndex = 0;
 
             cmbSex2 = cmbSex;
 
-            cmbMarital.Items.Add("Married");
-            cmbMarital.Items.Add("Single");
+            cmbMarital.Items.Add("विवाहित");
+            cmbMarital.Items.Add("अविवाहित");
             cmbMarital.SelectedIndex = 0;
 
             cmbMarital2 = cmbMarital;
 
-            cmbAccountType.Items.Add("Current");
-            cmbAccountType.Items.Add("Savings");
-            cmbAccountType.Items.Add("Fixed Deposit");
+            cmbAccountType.Items.Add("वर्तमान");
+            cmbAccountType.Items.Add("बचत");
+            cmbAccountType.Items.Add("मुदत ठेव");
             cmbAccountType.SelectedIndex = 1;
 
             dateOfOpening.Text = System.DateTime.Now.ToString();
@@ -77,9 +77,24 @@ namespace BankingWPFDesktopVersion
             dob.FontSize = 18;
             txtAddress.FontFamily = new FontFamily(MARATHI_FONT);
             txtAddress.FontSize = 18;
-
-            //lblName.Content = "naav";
-            //btnSave.Content = "";
+            lblName.Content = "नाव";
+            btnSave.Content = "जतन";
+            lblAccountNo.Content = "खाते क्र.";
+            lblAccountType.Content = "खाते प्रकार"; 
+            lblAddress.Content = "पत्ता";
+            lblAge.Content = "वय";
+            lblDeposit.Content = "ठेव";
+            lblDob.Content = "जन्म तारीख";
+            lblMarital.Content = "वैवहिक स्थिती";
+            lblMobile.Content = "मोबाईल";
+            txtAccountNo.FontFamily = new FontFamily(MARATHI_FONT);
+            txtAccountNo.FontSize = 18;
+            txtDeposit.FontFamily = new FontFamily(MARATHI_FONT);
+            txtDeposit.FontSize = 18;
+            lblOpeningDate.Content = "उघडण्याची तारीख";
+            lblSex.Content = "लिंग";
+            btnShowRpt.Content = "अहवाल";
+            
         }
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
@@ -151,11 +166,11 @@ namespace BankingWPFDesktopVersion
 
         private void btnShowRpt_Click(object sender, RoutedEventArgs e)
         {
-            //CrystalReport1 rpt = new CrystalReport1();
+           //CrystalReport1 rpt = new CrystalReport1();
             //rpt.
-            //MessageBox.Show(txtName.Text);
-            //Reports reports = new Reports(new DataController().getCustomerDataTable());
-            //this.NavigationService.Navigate(reports);
+           //MessageBox.Show(txtName.Text);
+          //Reports reports = new Reports(new DataController().getCustomerDataTable());
+          //this.NavigationService.Navigate(reports);
         }
 
 

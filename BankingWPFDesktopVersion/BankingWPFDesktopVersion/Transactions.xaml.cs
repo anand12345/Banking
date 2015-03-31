@@ -24,7 +24,7 @@ namespace BankingWPFDesktopVersion
         private DataTable customer;
         private DataTable transactions;
         private DataController dc;
-
+        public static string MARATHI_FONT = "Shivaji02";
         public Transactions(DataTable account)
         {
             InitializeComponent();
@@ -45,7 +45,11 @@ namespace BankingWPFDesktopVersion
         {
             lblCustomerName.Content = "नाव";
             lblAccBalance.Content = "शिल्लक";
-
+            button1.Content = "अहवाल निर्माण";
+            lblCustomerNameLoaded.FontFamily = new FontFamily(MARATHI_FONT);
+            lblCustomerNameLoaded.FontSize = 18;
+            lblBalance.FontFamily = new FontFamily(MARATHI_FONT);
+            lblBalance.FontSize = 18;
         }
 
         private void dataGrid1_SelectionChanged(object sender, SelectionChangedEventArgs e)

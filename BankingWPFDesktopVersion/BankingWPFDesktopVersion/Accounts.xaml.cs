@@ -24,14 +24,31 @@ namespace BankingWPFDesktopVersion
         private DataTable account;
         private Withdraw withdraw;
         private Deposit deposit;
-
+        public static string MARATHI_FONT = "Shivaji02";
         public Accounts()
         {
             InitializeComponent();
             btnWithdraw.Visibility = Visibility.Hidden;
             btnDeposit.Visibility = Visibility.Hidden;
-        }
+            customizeControls();
 
+        }
+        private void customizeControls()
+        {
+            label1.Content = "खाते क्र.";
+            btnSubmit.Content = "सादर";
+            txtAccountNumber.FontFamily = new FontFamily(MARATHI_FONT);
+            txtAccountNumber.FontSize = 18;
+            btnWithdraw.Content = "काढणे";
+            btnDeposit.Content = "ठेव";
+            button1.Content="व्यवहार";
+
+
+            
+        
+        
+        }
+            
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
             DataController controller = new DataController();

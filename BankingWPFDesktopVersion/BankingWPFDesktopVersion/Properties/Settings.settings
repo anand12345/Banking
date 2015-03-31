@@ -10,5 +10,13 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">data source=F:\Resoneuronance\Banking\BankingWPFDesktopVersion\BankingWPFDesktopVersion\bin\Debug\banking.sqlite</Value>
     </Setting>
+    <Setting Name="C__Users_ANAND_Documents_Visual_Studio_2010_Projects_BankingWPFDesktopVersion_BankingWPFDesktopVersion_bin_Debug_banking_sqliteConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Dsn=bankingsqlite;database=C:\Users\ANAND\Documents\Visual Studio 2010\Projects\BankingWPFDesktopVersion\BankingWPFDesktopVersion\bin\Debug\banking.sqlite;stepapi=0;notxn=0;shortnames=0;longnames=0;nocreat=0;nowchar=0;fksupport=1;oemcp=0;bigint=0;jdconv=0&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.Odbc&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Dsn=bankingsqlite;database=C:\Users\ANAND\Documents\Visual Studio 2010\Projects\BankingWPFDesktopVersion\BankingWPFDesktopVersion\bin\Debug\banking.sqlite;stepapi=0;notxn=0;shortnames=0;longnames=0;nocreat=0;nowchar=0;fksupport=1;oemcp=0;bigint=0;jdconv=0</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
