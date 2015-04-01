@@ -204,6 +204,11 @@ namespace BankingWPFDesktopVersion
             }
         }
 
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            txtName.Focus();
+        }
+
 
     }
 }

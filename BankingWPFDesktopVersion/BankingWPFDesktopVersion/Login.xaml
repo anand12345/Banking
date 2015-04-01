@@ -5,13 +5,13 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       mc:Ignorable="d" 
       d:DesignHeight="378" d:DesignWidth="394"
-	Title="Login">
+	Title="Login" Loaded="Page_Loaded">
 
     <Grid HorizontalAlignment="Center">
         <Label Content="Password :" Height="28" HorizontalAlignment="Left" Margin="46,130,0,0" Name="lblPassword" VerticalAlignment="Top" Width="124" />
-        <Button Content="Login" Height="23" HorizontalAlignment="Left" Margin="142,182,0,0" Name="btnSubmit" VerticalAlignment="Top" Width="115" Click="btnSubmit_Click" />
-        <ComboBox Height="23" HorizontalAlignment="Left" Margin="142,96,0,0" Name="cmbUserType" VerticalAlignment="Top" Width="162" />
+        <Button Content="Login" Height="23" HorizontalAlignment="Left" Margin="142,182,0,0" Name="btnSubmit" VerticalAlignment="Top" Width="115" Click="btnSubmit_Click" TabIndex="3" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="142,96,0,0" Name="cmbUserType" VerticalAlignment="Top" Width="162" TabIndex="1" />
         <Label Content="User :" Height="28" HorizontalAlignment="Left" Margin="46,96,0,0" Name="lblUser" VerticalAlignment="Top" Width="124" />
-        <PasswordBox Height="23" HorizontalAlignment="Left" Margin="142,130,0,0" Name="txtPassword" VerticalAlignment="Top" Width="162" />
+        <PasswordBox Height="23" HorizontalAlignment="Left" Margin="142,130,0,0" Name="txtPassword" VerticalAlignment="Top" Width="162" TabIndex="2" />
     </Grid>
 </Page>

@@ -35,11 +35,13 @@ namespace BankingWPFDesktopVersion
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            ReportDocument report = new ReportDocument();
+            TransactionsReport report = new TransactionsReport();
             report.Load("F:\\Resoneuronance\\Banking\\BankingWPFDesktopVersion\\BankingWPFDesktopVersion\\" + reportName + ".rpt");
             report.SetDataSource(reportSource);
             crystalReportsViewer1.ViewerCore.ReportSource = report;
-            
+            //reportSource.Rows[0]["account_no"].ToString();
+            //crystalReportsViewer1.Refresh();
+            report.Refresh();
         }
     }
 }

@@ -115,7 +115,7 @@ namespace BankingWPFDesktopVersion
             {
                 cmd.ExecuteNonQuery();
                 cmd = new SQLiteCommand("insert into transactions(transaction_type,transaction_date,value_date," +
-                       "transaction_amount,transaction_description,check_ref_no,account_no) values(?,?,?,?,?,?,?)", connection);
+                       "transaction_amount,transaction_description,cheque_ref_no,account_no) values(?,?,?,?,?,?,?)", connection);
                 //cmd.Parameters.Add("@date", System.DateTime.Now.Date.ToShortDateString());
                 //cmd.Parameters.Add("@date", System.DateTime.Now.Date);
                 cmd.Parameters.AddWithValue("transaction_type", "Withdraw");
@@ -123,8 +123,8 @@ namespace BankingWPFDesktopVersion
                 cmd.Parameters.AddWithValue("value_date", DateTime.Now.Date);
                 cmd.Parameters.AddWithValue("transaction_amount", amount);
                 cmd.Parameters.AddWithValue("transaction_description", "");
-                cmd.Parameters.AddWithValue("check_ref_no", "");
-                cmd.Parameters.AddWithValue("account_no", accountNo);
+                cmd.Parameters.AddWithValue("cheque_ref_no", "");
+                cmd.Parameters.AddWithValue("account_no", int.Parse(accountNo));
 
                 cmd.ExecuteNonQuery();
                 transaction.Commit();
@@ -149,14 +149,14 @@ namespace BankingWPFDesktopVersion
             {
                 cmd.ExecuteNonQuery();
                 cmd = new SQLiteCommand("insert into transactions(transaction_type,transaction_date,value_date," +
-                       "transaction_amount,transaction_description,check_ref_no,account_no) values(?,?,?,?,?,?,?)", connection);
+                       "transaction_amount,transaction_description,cheque_ref_no,account_no) values(?,?,?,?,?,?,?)", connection);
                 cmd.Parameters.AddWithValue("transaction_type", "Deposit");
                 cmd.Parameters.AddWithValue("transaction_date", DateTime.Now.Date);
                 cmd.Parameters.AddWithValue("value_date", DateTime.Now.Date);
                 cmd.Parameters.AddWithValue("transaction_amount", amount);
                 cmd.Parameters.AddWithValue("transaction_description", "");
-                cmd.Parameters.AddWithValue("check_ref_no", "");
-                cmd.Parameters.AddWithValue("account_no", accountNo);
+                cmd.Parameters.AddWithValue("cheque_ref_no", "");
+                cmd.Parameters.AddWithValue("account_no", int.Parse(accountNo));
 
                 cmd.ExecuteNonQuery();
                 transaction.Commit();

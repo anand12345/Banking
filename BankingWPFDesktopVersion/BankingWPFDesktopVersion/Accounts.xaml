@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       mc:Ignorable="d" 
       d:DesignHeight="627" d:DesignWidth="1206"
-	Title="Accounts">
+	Title="Accounts" Loaded="Page_Loaded">
 
     <Grid>
         <TextBox Height="23" HorizontalAlignment="Left" Margin="266,44,0,0" Name="txtAccountNumber" VerticalAlignment="Top" Width="231" />
@@ -14,6 +14,6 @@
         <Button Content="Withdraw" Height="23" HorizontalAlignment="Left" Margin="87,134,0,0" Name="btnWithdraw" VerticalAlignment="Top" Width="93" Click="btnWithdraw_Click" />
         <Button Content="Deposit" Height="23" HorizontalAlignment="Left" Margin="87,189,0,0" Name="btnDeposit" VerticalAlignment="Top" Width="93" Click="btnDeposit_Click" />
         <Frame x:Name="mainFrame" NavigationUIVisibility="Hidden" Margin="201,88,0,0" HorizontalAlignment="Left" Width="993" Height="507" VerticalAlignment="Top" />
-        <Button Content="Transactions" Height="23" HorizontalAlignment="Left" Margin="87,248,0,0" Name="button1" VerticalAlignment="Top" Width="93" Click="button1_Click" />
+        <Button Content="Transactions" Height="23" HorizontalAlignment="Left" Margin="87,248,0,0" Name="btnTransactions" VerticalAlignment="Top" Width="93" Click="button1_Click" />
     </Grid>
 </Page>

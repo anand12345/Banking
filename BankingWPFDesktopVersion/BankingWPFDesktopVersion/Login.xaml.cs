@@ -72,5 +72,10 @@ namespace BankingWPFDesktopVersion
                 MessageBox.Show("Invalid credentials!");
             }
         }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            txtPassword.Focus();
+        }
     }
 }
